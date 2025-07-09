@@ -75,17 +75,28 @@ Choosing the right neighborhood is often overwhelming due to:
 
 ## 🌍 Deployment
 
-🚀 **Live URL**: [https://neighborfit-demo.netlify.app](https://neighborfit-demo.netlify.app)  
-🛠️ **Backend API**: [https://neighborfit-api.onrender.com](https://neighborfit-api.onrender.com)
+🚀 **Live Frontend URL**: [https://neighborfit-demo.netlify.app](https://neighborfit-demo.netlify.app)  
+🛠️ **Live Backend API**: [https://neighborfit-api.onrender.com](https://neighborfit-api.onrender.com)
 
 ---
 
 ## 📁 Folder Structure
 
-/client # React frontend
-/server # Node.js + Express backend
-/data # Raw and cleaned datasets
-/docs # Research notes and design documentation
+NeighborFit-Project/
+│
+├── frontend/ # React.js frontend application
+│ ├── public/
+│ ├── src/
+│ └── package.json
+│
+├── backend/ # Node.js Express backend with API & logic
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ └── server.js
+│
+├── data/ # (Optional) Raw and processed data files
+└── README.md
 
 yaml
 Copy
@@ -95,30 +106,36 @@ Edit
 
 ## 📦 How to Run Locally
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/neighborfit.git
-   cd neighborfit
-Install dependencies:
+### 1. Clone the repository
 
+```bash
+git clone https://github.com/Rajeevkr18/NeighborFit-Project.git
+cd NeighborFit-Project
+2. Install dependencies
+For Backend
 bash
 Copy
 Edit
-cd server
+cd backend
 npm install
-cd ../client
-npm install
-Start the development servers:
-
+For Frontend
 bash
 Copy
 Edit
-# In one terminal
-cd server
+cd ../frontend
+npm install
+3. Start the development servers
+In one terminal, start the backend
+bash
+Copy
+Edit
+cd backend
 npm run dev
-
-# In another terminal
-cd client
+In another terminal, start the frontend
+bash
+Copy
+Edit
+cd frontend
 npm start
 🧠 Reflection & Future Improvements
 ✅ Achievements
@@ -141,3 +158,4 @@ Add user account & save preferences.
 Use ML models for dynamic learning.
 
 Integrate map visualizations and crime trends.
+
